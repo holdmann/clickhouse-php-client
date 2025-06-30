@@ -225,6 +225,12 @@ class Settings
         return $this->client->execute('SET :name = :value', ['name' => $name, 'value' => $value]);
     }
 
+    public function database($db)
+    {
+        $this->database = $db;
+        return $this->client->execute('SET database = :db', ['db' => $db]);
+    }
+
     public function __isset($name)
     {
 

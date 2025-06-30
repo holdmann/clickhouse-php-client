@@ -49,6 +49,16 @@ class Client
         $this->queryGrammar = new Query\Grammar();
     }
 
+    /**
+     * set db name
+     * @return static
+     */
+    public function database($db)
+    {
+        $this->system->settings()->database($db);
+
+        return $this;
+    }
 
     /**
      * Begin a fluent query against a database table.
