@@ -222,7 +222,7 @@ class Settings
         }
 
         $this->{$name} = $value;
-        return $this->client->execute('SET :name = :value');
+        return $this->client->execute('SET :name = :value', ['name' => $name, 'value' => $value]);
     }
 
     public function __isset($name)
