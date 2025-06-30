@@ -228,7 +228,7 @@ class Settings
     public function database($db)
     {
         $this->database = $db;
-        return $this->client->execute('SET database = :db', ['db' => $db]);
+        return $this->client->execute('USE :db', ['db' => $db]);
     }
 
     public function __isset($name)
