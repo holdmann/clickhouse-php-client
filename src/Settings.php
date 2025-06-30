@@ -187,6 +187,8 @@ class Settings
      * @TODO описать все настройки max_rows_to_readmax_rows_to_read и ниже из документации
      */
 
+    private $database;
+
     /**
      *
      * @param $connection
